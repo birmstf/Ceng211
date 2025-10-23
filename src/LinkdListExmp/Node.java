@@ -1,9 +1,9 @@
 package LinkdListExmp;
 
 public class Node {
-    int data;
-    Node next; //Node tipinde değişken tanımladık
-    Node(int data) {
+    public int data;
+    public Node next; //Node tipinde değişken tanımladık
+    public Node(int data) {
         this.data = data;
         this.next = null;
     }
