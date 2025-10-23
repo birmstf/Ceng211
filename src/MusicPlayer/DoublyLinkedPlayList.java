@@ -92,7 +92,7 @@ public class DoublyLinkedPlayList {
             return;
         }
 
-        System.out.println("\n📋 Çalma Listesi:");
+        System.out.println("\n Çalma Listesi:");
         System.out.println("─────────────────────────────────");
         Song temp = head;
         int index = 1;
@@ -105,6 +105,59 @@ public class DoublyLinkedPlayList {
         }
         System.out.println("─────────────────────────────────");
         System.out.println("Head: " + head.title + " | Tail: " + tail.title);
+    }
+
+    public void removeSong(String title) {
+        if (head == null) {
+            System.out.println("Çalma listesi boş!");
+            return;
+        }
+
+        Song temp = head;
+
+        // Şarkıyı bul
+        while (temp != null && !temp.title.equals(title)) {
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.println(" Şarkı bulunamadı!");
+            return;
+        }
+
+        // Eğer silinecek şarkı çalan şarkıysa
+        if (temp == current) {
+            if (temp.next != null) {
+                current= temp.next;
+            } else if (temp.prev != null) {
+                current = temp.prev;
+            } else {
+                current = null;
+            }
+        }
+
+        // Tek eleman varsa
+        if (temp == head && temp == tail) {
+            head = null;
+            tail = null;
+        }
+        // Head'i silme
+        else if (temp == head) {
+            head = temp.next;
+            head.prev = null;
+        }
+        // Tail'i silme
+        else if (temp == tail) {
+            tail = temp.prev;
+            tail.next = null;
+        }
+        // Ortadaki şarkıyı silme
+        else {
+            temp.prev.next = temp.next;
+            temp.next.prev = temp.prev;
+        }
+
+        System.out.println("✓ Silindi: " + temp.getInfo());
     }
 }
 
