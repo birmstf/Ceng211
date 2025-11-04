@@ -14,6 +14,7 @@ public class TestQueue {
         queue.enqueue(20);
         queue.enqueue(30);
         queue.enqueue(40);
+        queue.enqueue(50);
 
         System.out.println(queue.dequeue() + "dequeued from queue\n");
         System.out.println("Front item is:" + queue.front());

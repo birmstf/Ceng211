@@ -27,13 +27,14 @@ public class MyStack {
 
         if(head!=null) {
             head.prev=newNode;
+
         }
 
         head = newNode;      // Yeni düğüm artık tepededir
         size++;
-        if(size==1) {
+        if(size==1) { //Eğer ilk eleman ekleniyorsa, hem head hem middle o eleman olur.
             middle=newNode;
-        } else if (size %2!=0) {
+        } else if (size %2!=0) { //Eğer toplam eleman sayısı tek hale geldiyse (örneğin 3, 5, 7...), middle bir önceki elemana (prev) kaydırılır.
             middle=middle.prev;
         }
 
@@ -74,8 +75,8 @@ public class MyStack {
 
         System.out.println("Ortadaki eleman (" + middle.data + ") çıkarıldı.");
 
-        // Eğer tek eleman varsa
-        if (size == 1) {
+        // Eğer tek eleman varsa doğrudan temizlenir.
+        if (size == 1) { //
             head = null;
             middle = null;
             size = 0;

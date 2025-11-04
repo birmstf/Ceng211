@@ -11,6 +11,9 @@ package MusicPlayer;
             player.addSong("Hotel California");
             player.addSong("Imagine");
 
+
+            player.removeSong("Hotel California");
+
         }
     }
 

@@ -12,6 +12,8 @@ public class testStackExmp {
         stack.push(40);
         stack.push(50);
 
+        stack.pop();
+
         stack.display();
         System.out.println("Stack boyutu: " + stack.getSize());
 

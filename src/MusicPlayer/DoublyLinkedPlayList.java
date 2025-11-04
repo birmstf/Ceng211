@@ -17,9 +17,9 @@ public class DoublyLinkedPlayList {
             }
 
 
-            tail.next = newSong; // tail next ile en sona ekleme yaptık.  Someone Like You burayı atadakı
-            newSong.prev = tail; // onceki sarkıya taildeki sarkıyı ekle
-            tail = newSong;
+            tail.next = newSong; //  Listenin sonundaki mevcut şarkının “sonraki”sini, yeni şarkı olarak işaretliyorsun.
+            newSong.prev = tail; // Yeni şarkının “önceki”sini, eski tail’e bağlıyorsun.
+            tail = newSong; // Artık listenin sonu (tail) yeni şarkı oluyor.
 
             System.out.println("Added: " + newSong.getInfo());
         }
