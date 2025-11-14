@@ -2,9 +2,9 @@ package LinkdListExmp;
 
 public class ReverseLinkedList {
     static Node reverse(Node head) {
-        Node prev = null;
-        Node current = head;
         Node next = null;
+        Node current = head;
+        Node prev = null;
 
         while (current != null) {
             next = current.next;   // sonraki düğümü kaydet

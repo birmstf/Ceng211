@@ -9,17 +9,17 @@ public class LinkedList {
 
     // Listenin sonuna düğüm ekleme
     public void append(int data) {
-        Node newNode = new Node(data); // Yeni düğüm oluştur
+        Node n = new Node(data); // Yeni düğüm oluştur
         if (head == null) {  // Liste boş mu?
-            head = newNode; // Yeni düğüm baş eleman olur
+            head = n; // Yeni düğüm baş eleman olur
             return;
         }
 
-        Node current = head;
-        while (current.next != null) {   // Listenin sonuna git
-            current = current.next;
+        Node temp = head;
+        while (temp.next != null) {   // Listenin sonuna git
+            temp = temp.next;
         }
-        current.next = newNode;
+        temp.next = n;
     }
 
     // Listenin başına düğüm ekleme

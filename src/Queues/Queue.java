@@ -36,6 +36,23 @@ public class Queue {
         System.out.println(item + "enqueued to queue");
     } // Method to remove an item from queue.
 
+    boolean areEqual(Queue q1, Queue q2) {
+
+        if (q1.size != q2.size) {
+            return false;
+        }
+
+        for (int i = 0; i < q1.size; i++) {
+            int q1index = (q1.front + i) % q1.capacity;
+            int q2index = (q2.front + i) % q2.capacity;
+
+            if (q1.array[q1index] != q2.array[q2index]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 // It changes front and size
 
     int dequeue() {

@@ -27,7 +27,6 @@ public class MyStack {
 
         if(head!=null) {
             head.prev=newNode;
-
         }
 
         head = newNode;      // Yeni düğüm artık tepededir

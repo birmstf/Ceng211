@@ -14,4 +14,17 @@ public class FibonacciRecursive {
         int result = fib(n);
         System.out.println("\nSonuç: fib(" + n + ") = " + result);
     }
+
+    public int fibCount(int[] arr, int index) {
+        if (arr.length == index) return 0;  // temel durum
+
+        if(arr[index]%2==0) {
+            return 1+fibCount(arr,index+1);
+        } else {
+            fibCount(arr,index+1);
+        }
+
+        return 0;
+     }
+
 }
