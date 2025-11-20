@@ -3,8 +3,9 @@ package MusicPlayer;
 public class DoublyLinkedPlayList {
 
         Song head;
-        Song tail;
         Song current;
+        Song tail;
+
 
         // add playlist
         public void addSong(String title) {

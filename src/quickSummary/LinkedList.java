@@ -13,15 +13,6 @@ public class LinkedList {
 
     Node head;
 
-    // LISTELEME
-    public void printList() {
-        Node t = head;
-        while (t != null) {
-            System.out.println(t.data);
-            t = t.next;
-        }
-    }
-
     // SEARCH
     public boolean search(int x) {
         Node t = head;
@@ -30,6 +21,14 @@ public class LinkedList {
             t = t.next;
         }
         return false;
+    }
+    // LISTELEME
+    public void printList() {
+        Node t = head;
+        while (t != null) {
+            System.out.println(t.data);
+            t = t.next;
+        }
     }
 
     // ADD FIRST
