@@ -32,6 +32,7 @@ public  class TreeMaster {
         t.inorder(t.root);
 
 
+        t.printTree(t.root);
 
     }
 }

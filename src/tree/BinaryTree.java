@@ -166,4 +166,25 @@ public class BinaryTree {
             inorderFill(p.right, arr);
         }
     }
+
+    void printTree(Node root) {
+        printTreeRec(root, 0);
+    }
+
+    void printTreeRec(Node p, int level) {
+        if (p == null) return;
+
+        // Önce sağ alt ağacı yaz (yukarıya denk gelir)
+        printTreeRec(p.right, level + 1);
+
+        // Kökü sola doğru boşluk vererek yaz
+        for (int i = 0; i < level; i++) {
+            System.out.print("    ");  // 4 boşluk
+        }
+        System.out.println(p.data);
+
+        // Sonra sol alt ağacı yaz (aşağıya denk gelir)
+        printTreeRec(p.left, level + 1);
+    }
+
 }
